@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="pomodoro.png">
+    <title>Studying with Pomodoro</title>
+    <link rel="stylesheet" href="styles.css"
+</head>
+
+<body>
+    <div class="top-bar"> 
+        <span class="icon-cog" id="toggle-sett">⚙️</span>
+        <span id="sett-text">Settings</span>
+        <div id = "drop-content">
+            <div class = "select-options">
+                <label for="time-options">Time Options</label>
+                <p></p>
+                <select id="time-options" name="work-options" onchange="reset()">
+                    <option value="25" selected>25 minutes</option>
+                    <option value="35">35 minutes</option>
+                    <option value="45">45 minutes</option>
+                    <option value="55">55 minutes</option>
+                </select>
+                <p></p>
+                <label for="total-sessions-options">Sessions</label>
+                <p></p>
+                <select id="total-sessions-options" name="number-session" onchange="reset()">
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4" selected>4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main">
+        <audio id="notification" src="notification.mp3" preload="auto"></audio>
+        <div class="session">1/4</div>
+
+        <div class="timer-container">
+            <div class="circle">
+                <svg width="200" height="200" class="circle-container">
+                    <circle class="background-circle" r="90" cx="100" cy="100"></circle>
+                    <circle class="circle-only" r="90" cx="100" cy="100"></circle>
+                </svg>
+                <div class="timer">00:00</div>
+            </div>     
+        </div>
+          
+        <div class="time-mode">Pomodoro Timer</div>
+
+        <div>
+        <button class="start-button">Start</button>
+        <button class="reset-button">Reset</button>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>

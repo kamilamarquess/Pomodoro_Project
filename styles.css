@@ -1,0 +1,150 @@
+body {
+  min-height: 99vh;
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  flex-direction: column;
+  background: linear-gradient(180deg, #ffaea0 65%, #a3e6f8);
+  font-family: "Helvetica", sans-serif;
+  font-weight: 550;
+  font-size: 30px;
+  color: #808080;
+}
+
+.top-bar {
+  width: 100%;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.icon-cog {
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.icon-cog:hover {
+  transform: rotate(20deg) scale(1.1);
+}
+
+#sett-text {
+  font-size: 16px;
+  margin-right: 30px;
+  margin-top: 10;
+}
+
+#drop-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 3%;
+  flex-direction: column;
+  gap: 15px;
+  background: #ffe8db;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  width: 140px;
+  z-index: 100;
+  font-size: 21px;
+}
+
+.main {
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.timer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  position: relative;
+  width: 230px;
+  height: 230px;
+}
+
+.circle-container {
+  transform: rotate(-90deg);
+}
+
+.background-circle,
+.circle-only {
+  fill: none;
+}
+
+.background-circle {
+  stroke: rgba(255, 255, 255, 0.25);
+  stroke-width: 5;
+}
+
+.circle-only {
+  stroke: #c6a3ea;
+  stroke-width: 10;
+  stroke-dasharray: 565.49;
+  stroke-dashoffset: var(--dash-offset, 0);
+  transition: stroke-dashoffset 1s linear;
+}
+
+.timer {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  font-weight: 700;
+  color: #6b6b6b;
+}
+
+button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  background: #ffc6d9;
+  color: #6b6b6b;
+  font-weight: 600;
+  transition: 0.25s ease;
+}
+
+button:hover {
+  background: #ffbde8;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.reset-button {
+  background: #cde7ff;
+}
+
+.reset-button:hover {
+  background: #badcff;
+}
+
+.select-options label {
+  font-weight: 600;
+  color: #555;
+}
+
+select {
+  padding: 6px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
